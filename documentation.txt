@@ -1,3 +1,4 @@
+
 First I created a new folder to start building the webserver in, in this case I called it "sammulqueen_com" because that was the domain name I was going to use when publishing the website.
 
 Then I created this documentation.txt file within the folder to begin writing these notes.
@@ -50,3 +51,5 @@ I would like the server to be event driven. This means that when requests are ma
 NodeJS already has a class called EventEmitter which could be used for this purpose, but I would like to write my own so that I can have it working just how I like and add features easily.
 
 >>Saving updated documentation.txt file.
+
+>>Created a folder for my libraries of javascript files and an Events.js file.
