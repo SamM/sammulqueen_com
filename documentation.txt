@@ -21,3 +21,32 @@ From now on paragraphs starting with >> are the messages from git commits I make
 Here's the first one:
 
 >>I created documentation.txt and wrote an introduction then made the first commit.
+
+>>Used Notepad to save the documentation.txt file and it got saved as documentation.txt.txt. So I fixed it.
+
+Ok so I think I have the documentation side of it sussed. Time to get started working on the project.
+
+So I've already been doing some thinking about some of the features I'd like to have in the development blogs.
+
+I'd like each blog to be seperated into their own folders. I'd like the server to treat each folder in much the same way and be able to build and run a website for each blog.
+
+I'd like the blog posts to be stored as html files, js files and css files.
+I'd also like blog posts to include base css files, and base javascript files.
+
+I've decided that each post can omit all of the website's interface and instead focussing purely on the content. Instead a combination of Javascript interface creation and CSS styling will be utilized. The JS script will be run on page load and will generate the interface and will perhaps even have it's own intro.
+
+Later I would like the JS interface to be incharge of taking and displaying comments from website visitors and display page stats like the number of views in the last minute, 5 mins, hour, day, week, month and year.
+
+So the posts will be stored as html files. I would like the website to have a file editor that loads, displays and allows editting of the HTML, JS, and CSS files.
+
+It would be good if all of the files get timestamped for creation dates and the date of the last update. This can be done in the form of meta tags in the HTML file and comment headers in the JS and CSS files. I'll also include my name as author.
+
+It would also be good if the editor could generate this metadata for each file automatically.
+
+Next I'll talk about the actual webserver which will be written in Javascript using NodeJS.
+
+I would like the server to be event driven. This means that when requests are made to the server it will emit an event. Then by using event listeners I can write processing code to be executed when specific things about the request are identified. 
+
+NodeJS already has a class called EventEmitter which could be used for this purpose, but I would like to write my own so that I can have it working just how I like and add features easily.
+
+>>Saving updated documentation.txt file.
