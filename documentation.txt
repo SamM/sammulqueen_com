@@ -74,3 +74,7 @@ The emit function loops thru the before list, main list and after list in turn (
 Because there are three methods to add listeners which all do the same thing except with different lists and three methods for removing listeners that that follow the same pattern I decided to generate each of the methods programatically using a loop.
 
 >>Updated documentation with an explanation of the Events.js class
+
+So that's the events handled for now, if I decide it needs more features later I'll add them then.
+>>Created Server.js file and initialized it with a basic template for my JS class.
+
