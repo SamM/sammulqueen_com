@@ -64,3 +64,13 @@ This will be done with:
 There should be before, on and after methods for adding listeners at these points and remove_before, remove and remove_after methods for removing listeners from the lists.
 
 >>Created Events class with emit, before, on, after, remove_before, remove, remove_after methods.
+
+Because I wanted there to be events fired before and after as well as on the time of an event there now needs to be 3 collections of listeners.
+
+Each collection will be a javascript object which will list arrays of listener functions mapped to the event names.
+
+The emit function loops thru the before list, main list and after list in turn (if they exist) and calls each of the listener functions, passing in the arguments from the emit function.
+
+Because there are three methods to add listeners which all do the same thing except with different lists and three methods for removing listeners that that follow the same pattern I decided to generate each of the methods programatically using a loop.
+
+>>Updated documentation with an explanation of the Events.js class
