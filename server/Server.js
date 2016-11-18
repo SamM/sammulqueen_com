@@ -1,4 +1,4 @@
-const Events = require("./Events.js");
+const Events = require("../lib/Events.js");
 
 const Server = function(port, hostname){
     const server = this;
