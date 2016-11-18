@@ -53,3 +53,14 @@ NodeJS already has a class called EventEmitter which could be used for this purp
 >>Saving updated documentation.txt file.
 
 >>Created a folder for my libraries of javascript files and an Events.js file.
+
+I would like to be able to make event listeners for before an event, on an event and after an event.
+
+I would like to make it so that when listening function use 'this' it will point to the request object. I would also like to pass in arguments to be sent to the listeners also. 
+
+This will be done with:
+  Events.emit.call(request, "request", "arg 1", {obj: true});
+
+There should be before, on and after methods for adding listeners at these points and remove_before, remove and remove_after methods for removing listeners from the lists.
+
+>>Created Events class with emit, before, on, after, remove_before, remove, remove_after methods.
