@@ -11,7 +11,7 @@ I have decided that I am going to use NodeJS to develop the webserver component 
 
 To help break up the steps I take in developing this website, and also to keep track of all the changes that go on in the process: I have decided to use Git as well as keeping the documentation.txt file up to date.
 
-Fortunately I had already installed Git on my development laptop, had an existing Github account and had the Github desktop app. installed so I was ready to start using it immediately. 
+Fortunately I had already installed Git on my development laptop, had an existing Github account and had the Github desktop app. installed so I was ready to start using it immediately.
 
 By using Github I can access the project from any computer and make updates to it from multiple different locations while keeping each device's version of the website in sync too.
 
@@ -46,7 +46,7 @@ It would also be good if the editor could generate this metadata for each file a
 
 Next I'll talk about the actual webserver which will be written in Javascript using NodeJS.
 
-I would like the server to be event driven. This means that when requests are made to the server it will emit an event. Then by using event listeners I can write processing code to be executed when specific things about the request are identified. 
+I would like the server to be event driven. This means that when requests are made to the server it will emit an event. Then by using event listeners I can write processing code to be executed when specific things about the request are identified.
 
 NodeJS already has a class called EventEmitter which could be used for this purpose, but I would like to write my own so that I can have it working just how I like and add features easily.
 
@@ -56,7 +56,7 @@ NodeJS already has a class called EventEmitter which could be used for this purp
 
 I would like to be able to make event listeners for before an event, on an event and after an event.
 
-I would like to make it so that when listening function use 'this' it will point to the request object. I would also like to pass in arguments to be sent to the listeners also. 
+I would like to make it so that when listening function use 'this' it will point to the request object. I would also like to pass in arguments to be sent to the listeners also.
 
 This will be done with:
   Events.emit.call(request, "request", "arg 1", {obj: true});
@@ -82,7 +82,7 @@ So that's the events handled for now, if I decide it needs more features later I
 
 >>Added event handling to the Server class.
 
->>Changed the file structure of the project folder. 
+>>Changed the file structure of the project folder.
 >>>>Added a server and client folder to seperate js files, and kept the lib folder for js files that are useable to both server and client.
 
 (>> denotes the summary of the commit)
@@ -90,8 +90,12 @@ So that's the events handled for now, if I decide it needs more features later I
 
 I'll use the summary to say what I did.
 I'll use the description to describe how I did it.
+
 >>Redesigned Events class to use a single array of listeners, which are object-based.
->>>>
-The new system stores all listeners in one array. They are stored as event objects. I added more stages that can be targeted, now there are: first, before, at, after, last. 
+>>>>The new system stores all listeners in one array. They are stored as event objects. I added more stages that can be targeted, now there are: first, before, at, after, last.
 >>>>Event objects have these attributes: stage, name, listener function, priority (less ranks first), and the time of their creation.
 >>>>By default the listeners get sorted by priority and then by time (earliest ranks first).
+
+>>Updated Server class to load listeners from the /server/listeners folder.
+>>>>Loads all js or json files from every folder inside /server/listeners.
+>>>>Each file must return an array of listeners to be concatenated on to the end of the events.listeners array.
