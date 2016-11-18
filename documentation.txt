@@ -81,3 +81,17 @@ So that's the events handled for now, if I decide it needs more features later I
 
 
 >>Added event handling to the Server class.
+
+>>Changed the file structure of the project folder. 
+>>>>Added a server and client folder to seperate js files, and kept the lib folder for js files that are useable to both server and client.
+
+(>> denotes the summary of the commit)
+(>>>> denotes a description of the commit)
+
+I'll use the summary to say what I did.
+I'll use the description to describe how I did it.
+>>Redesigned Events class to use a single array of listeners, which are object-based.
+>>>>
+The new system stores all listeners in one array. They are stored as event objects. I added more stages that can be targeted, now there are: first, before, at, after, last. 
+>>>>Event objects have these attributes: stage, name, listener function, priority (less ranks first), and the time of their creation.
+>>>>By default the listeners get sorted by priority and then by time (earliest ranks first).
