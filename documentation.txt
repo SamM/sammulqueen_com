@@ -99,3 +99,8 @@ I'll use the description to describe how I did it.
 >>Updated Server class to load listeners from the /server/listeners folder.
 >>>>Loads all js or json files from every folder inside /server/listeners.
 >>>>Each file must return an array of listeners to be concatenated on to the end of the events.listeners array.
+
+>>Made empty listener files for different http request types: get, post, put, delete
+
+>>Added start method to Server which loads all listeners from file and then emits the start event.
+>>>>I also added a blank listener file for the start event.
