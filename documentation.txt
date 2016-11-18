@@ -1,0 +1,23 @@
+First I created a new folder to start building the webserver in, in this case I called it "sammulqueen_com" because that was the domain name I was going to use when publishing the website.
+
+Then I created this documentation.txt file within the folder to begin writing these notes.
+
+Then I wrote this, and this. I also wrote this. Haha just joking, let's begin.
+
+The aim of this exercise is to create my own personal website, and on it host two development blogs. The first blog will detail my development of this website itself, and these notes will be used to form it's content. The second blog will be on the development of 3d worlds from scratch using primarily javascript. In the second I hope to include interactive canvas elements into the blog posts which can show off the interesting work I produce in the process of developing each segment of work for the project. They could be as simple as drawing a circle on screen, if that was a step in the project.
+
+I have decided that I am going to use NodeJS to develop the webserver component of the website. This will handle all of the HTTP requests that I recieve to my domain when the website goes live. I will also be using it locally on my computer while I develop it prior to and probably during the production stage of the website's development.
+
+To help break up the steps I take in developing this website, and also to keep track of all the changes that go on in the process: I have decided to use Git as well as keeping the documentation.txt file up to date.
+
+Fortunately I had already installed Git on my development laptop, had an existing Github account and had the Github desktop app. installed so I was ready to start using it immediately. 
+
+By using Github I can access the project from any computer and make updates to it from multiple different locations while keeping each device's version of the website in sync too.
+
+I opened the Github app. and created a new repository from the folder I created for the project.
+
+From now on paragraphs starting with >> are the messages from git commits I make during the development of the website.
+
+Here's the first one:
+
+>>I created documentation.txt and wrote an introduction then made the first commit.
