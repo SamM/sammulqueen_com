@@ -4,6 +4,10 @@ const fs = require('fs');
 const Server = function(port, hostname){
     const server = this;
     server.events = new Events();
+
+    server.port = port;
+    server.hostname = hostname;
+
     // Load all listeners from /server/listeners folder
     server.loadListeners = function(){
       function loadListenersFolder(path){

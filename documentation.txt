@@ -104,3 +104,6 @@ I'll use the description to describe how I did it.
 
 >>Added start method to Server which loads all listeners from file and then emits the start event.
 >>>>I also added a blank listener file for the start event.
+
+>>Created run_server.js file to be used to run an instance of Server.
+>>>>The port I chose to run the webserver on was 3333 on my localhost.
